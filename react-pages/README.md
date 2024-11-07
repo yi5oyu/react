@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Create React App 프로젝트
+    프로젝트 생성
+    npx create-react-app 프로젝트명 > cd 프로젝트명(폴더 이동)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    /react-pages
+    ├── public
+    ├── src
+    │   ├── assets
+    │   ├── components
+    │   ├── pages
+    │   │   ├── Home
+    │   │   ├── Test
+    │   ├── App.css
+    │   ├── App.js
+    │   ├── index.js
+    ├── package.json
+    └── README.md
 
-## Available Scripts
+## GitHub Pages
+정적 웹 호스팅 서비스   
+gh-pages 브렌치에 커밋을 푸시하면 자동으로 빌드 및 배포
 
-In the project directory, you can run:
+    npm install gh-pages  
 
-### `npm start`
+    package.json 설정
+    homepage": "https://username.github.io/repository-name",
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    scripts 설정
+    "scripts": {   
+        "predeploy": "npm run build",   
+        "deploy": "gh-pages -d build",  
+    }  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    github pages 설정
+    Settings > Pages > Source > gh-pages 브랜치 설정
+    
+    https://username.github.io/repository-name
 
-### `npm test`
+[> package.json](https://github.com/yi5oyu/Study/blob/main/React.js/github%20pages/package.json)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> username, repository-name 수정
 
-### `npm run build`
+## HashRouter
+    npm install react-router-dom
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    import { HashRouter, Routes, Route } from "react-router-dom";     
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    function App() {
+        return (
+            <HashRouter>
+            <Routes basename="/react">
+                <Route path="/" element={<Home />} />
+                <Route path="/Test" element={<Test />}>
+                {/* <Route path=":cardId" element={<DetailCard />} /> */}
+                </Route>
+            </Routes>
+            </HashRouter>
+        );
+    }
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    export default App;
 
-### `npm run eject`
+>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    https://yi5oyu.github.io/react
+    https://yi5oyu.github.io/react/#/test
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[> App.js](https://github.com/yi5oyu/Study/blob/main/React.js/github%20pages/App.js)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 스크립트
+    package.json > scripts
+    
+- `npm start`   
+  개발 모드에서 실행(http://localhost:3000)    
+  ESLint를 사용해 코드 오류 콘솔 표시
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `npm test`   
+  테스트 실행    
+  파일의 변경을 감지하고 관련 테스트만 실행하도록 설정
 
-## Learn More
+- `npm run build`   
+  프로덕션용으로 빌드    
+  소스 파일의 크기를 줄여 배포 시 최적화된 상태로 애플리케이션을 제공
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `npm run eject`    
+  일방향 명령어(실행 후에는 되돌릴 수 없음)
+   모든 설정을 직접 커스터마이즈할 수 있음(webpack, Babel, ESLint 등...)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `npm run predeploy`    
+  pm run deploy 명령어가 실행되기 전에 자동으로 실행   
+  프로덕션 빌드 상태로 만들어 build 폴더에 준비
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `npm run deploy`    
+  gh-pages 패키지를 사용해 GitHub Pages에 애플리케이션을 배포   
+  gh-pages 브런치, build 폴더생성
