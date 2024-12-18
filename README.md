@@ -23,10 +23,11 @@
 
 ### VSCode 플러그인
 
+-  ES7+ React/Redux/React-Native snippets
 -  Material Icon Theme   
 -  One Dark Pro   
 -  Markdown All in One   
--  Prettier   
+-  Prettier
 
 > Prettier 설정    
 > VSCode Settings(Ctrl + ,)    
