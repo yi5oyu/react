@@ -52,12 +52,15 @@ Vue, Svelte 등 다양한 프레임워크를 지원, TypeScript 지원
 
 ## Settings
     프로젝트 생성
-     new Terminal > npm create vite@latest > 프로젝트명 
+     new Terminal > npm create vite@latest > 프로젝트명    
      > react > JavaScript > cd 프로젝트명(생성한 프로젝트로 이동)
 
-    라이브러리 설치(node_modules)
-    npm i
-    (package.json 라이브러리 목록 다운로드)
+    npm install react-router-dom axios   
+
+    라이브러리 설치(node_modules)    
+    npm i     
+    (package.json 라이브러리 목록 다운로드)    
+    
 
 ## Example
  - [Component](#component)
