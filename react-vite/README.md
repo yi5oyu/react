@@ -366,3 +366,51 @@ DOM 요소에 직접 접근할 수 있음
   > **.eslintrc VS eslint.config.js**   
   > .eslintrc: JSON, YAML, JS 사용, 간단한 프로젝트에 적합   
   > eslint.config.js: JS사용, 복잡하거나 대규모 프로젝트에 적합(규칙 유연하게 적용 가능)
+
+
+## Chakra UI
+
+    UI 라이브러리
+    npm install @chakra-ui/react@2.8.1 @emotion/react@11.11.0 @emotion/styled@11.11.0 framer-motion@6.2.8 @chakra-ui/icons@2.2.4 
+
+### 컴포넌트
+
+    재사용 가능한 UI 컴포넌트와 CSS 코드 없이 props만으로 간편한 스타일링 가능
+
+[> 컴포넌트 소개](https://github.com/yi5oyu/Study/blob/main/React.js/Chakra%20UI/Compoents/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8)
+
+#### Box
+
+    기본적인 레이아웃 컴포넌트
+    
+> root/components/Chakra/ChakraBox.jsx
+    
+    <Box 
+      boxSize="150px" 
+      bg="gray.100" 
+      p="2px" m="5px"
+    >
+        기본 레이아웃
+    </Box>
+  
+[> Box 예제](https://github.com/yi5oyu/Study/blob/main/React.js/Chakra%20UI/Compoents/ChakraBox.jsx)
+
+#### Input
+
+    사용자 입력을 받는 컴포넌트
+
+> root/components/Chakra/ChakraInput.jsx
+
+    <Input 
+      placeholder="입력" 
+      size="md" 
+      variant="Outline"
+      _hover={{ bg: "gray.200" }}
+      _focus={{ borderColor: "blue.500", boxShadow: "0 0 0 2px blue.300" }}
+    />
+
+[> Input 예제](https://github.com/yi5oyu/Study/blob/main/React.js/Chakra%20UI/Compoents/ChakraInput.jsx)
+
+## Markdown
+
+    npm install react-markdown@8.0.0
