@@ -6,11 +6,12 @@ import {
 } from "./components/ComponentExample";
 import Rendering from "./components/Rendering";
 import Property from "./components/Property";
-import Markdown from "./components/Markdown";
 import { ResizableBox } from "react-resizable";
-import ResponsiveResizableLayout from "./components/ResponsiveResizableLayout";
+import ResponsiveResizableLayout from "./components/layout/ResponsiveResizableLayout";
+import ChakraLeftSidebarFourSections from "./components/layout/sidebar/ChakraLeftSidebarFourSections";
 import ChakraBox from "./components/Chakra/ChakraBox";
-import ChakraInput from "./components/Chakra/ChakraInput";
+import ChakraLeftSidebarColSections from "./components/layout/sidebar/ChakraLeftSidebarColSections";
+import ChakraLeftSidebarSections from "./components/layout/sidebar/ChakraLeftSidebarSections";
 
 const judge = true;
 const name = "B";
@@ -34,9 +35,9 @@ function App() {
       {/* <Rendering name={name} judge={judge} array={array} />
       <Property imgalt={name} />
       <Markdown /> */}
-      {/* <ResponsiveResizableLayout /> */}
+      <ChakraLeftSidebarSections />
       {/* <ChakraBox /> */}
-      <ChakraInput />
+      {/* <ChakraInput /> */}
     </>
   );
 }

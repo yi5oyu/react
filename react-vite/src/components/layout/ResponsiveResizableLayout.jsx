@@ -14,7 +14,7 @@ import {
 import { FiMenu } from "react-icons/fi";
 import { ResizableBox } from "react-resizable";
 import "react-resizable/css/styles.css";
-import MarkdownText from "./MarkdownText";
+import MarkdownText from "../MarkdownText";
 import ReactMarkdown from "react-markdown";
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
 import remarkGfm from "remark-gfm";
@@ -52,7 +52,7 @@ function ResponsiveResizableLayout() {
 
   return (
     <Flex height="100vh" width="100vw">
-      {/* Sidebar */}
+      {/* 사이드바 */}
       <Box
         bg="gray.900"
         color="white"
@@ -61,13 +61,13 @@ function ResponsiveResizableLayout() {
         display={{ base: "none", md: "block" }}
       >
         <Text fontSize="xl" p="4" fontWeight="bold">
-          Sidebar
+          사이드바
         </Text>
-        <Text p="4">Navigation Item 1</Text>
-        <Text p="4">Navigation Item 2</Text>
+        <Text p="4">1</Text>
+        <Text p="4">2</Text>
       </Box>
 
-      {/* Responsive Drawer for Mobile */}
+      {/* 반응형(모바일) */}
       <IconButton
         icon={<FiMenu />}
         aria-label="Open Menu"
@@ -80,10 +80,10 @@ function ResponsiveResizableLayout() {
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader>Sidebar</DrawerHeader>
+          <DrawerHeader>사이드바</DrawerHeader>
           <DrawerBody>
-            <Text>Navigation Item 1</Text>
-            <Text>Navigation Item 2</Text>
+            <Text>1</Text>
+            <Text>2</Text>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
