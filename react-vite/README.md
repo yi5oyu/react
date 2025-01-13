@@ -413,4 +413,16 @@ DOM 요소에 직접 접근할 수 있음
 
 ## Markdown
 
-    npm install react-markdown@8.0.0
+    npm install react-markdown@8.0.7 remark-gfm@3.0.1 chakra-ui-markdown-renderer@4.1.0 
+
+> root/components/Chakra/Markdown.jsx
+
+    // 마크다운 렌더링
+    <ReactMarkdown
+      components={ChakraUIRenderer()}
+      remarkPlugins={[remarkGfm]}
+    >
+      {markdownText}
+    </ReactMarkdown>
+
+[> Markdown 예제](https://github.com/yi5oyu/Study/tree/main/React.js/Markdown)
