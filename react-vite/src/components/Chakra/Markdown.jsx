@@ -60,7 +60,7 @@ const Markdown = () => {
     <ChakraProvider theme={customTheme}>
       <Box p={5}>
         <Flex gap={5} flexWrap="wrap">
-          {/* Markdown Text */}
+          {/* 마크다운 입력 */}
           <Textarea
             value={markdownText}
             onChange={handleChange}
@@ -76,7 +76,7 @@ const Markdown = () => {
             borderRadius="md"
           />
 
-          {/* Markdown Preview */}
+          {/* 마크다운 화면 */}
           <Box
             w={["100%", "45%"]}
             h="300px"
