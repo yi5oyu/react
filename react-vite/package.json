@@ -10,10 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.8.1",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "chakra-ui-markdown-renderer": "^4.1.0",
+    "framer-motion": "^6.2.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-markdown": "^9.0.3",
-    "remark-gfm": "^4.0.0"
+    "react-icons": "^4.12.0",
+    "react-markdown": "^8.0.7",
+    "react-resizable": "^3.0.5",
+    "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
