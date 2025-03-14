@@ -10,7 +10,6 @@
 - [HashRouter](./react-pages/README.md#hashrouter)
 - [스크립트](./react-pages/README.md#스크립트)
 
-
 ## [react-vite](https://github.com/yi5oyu/react/tree/master/react-vite)
     React 공부, 실습, 테스트를 위한 프로젝트
     React + Vite (React + JavaScript)
@@ -49,3 +48,17 @@
 - **style**: 주석, 코드 모양 변경
 
 </details>
+
+### 라이브러리
+
+이모지 마트
+ - https://github.com/missive/emoji-mart
+
+simple-icons
+ - https://github.com/simple-icons/simple-icons
+
+
+
+
+
+
